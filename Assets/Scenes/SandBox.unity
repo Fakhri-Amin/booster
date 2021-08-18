@@ -132,19 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 212720554, guid: 6d7d1af0c0a123349b37355c2c1a9b3a, type: 3}
       propertyPath: rotateSpeed
-      value: 130
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 212720554, guid: 6d7d1af0c0a123349b37355c2c1a9b3a, type: 3}
       propertyPath: thrustSpeed
-      value: 1200
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884360902780778719, guid: 6d7d1af0c0a123349b37355c2c1a9b3a, type: 3}
-      propertyPath: m_Drag
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884360902780778719, guid: 6d7d1af0c0a123349b37355c2c1a9b3a, type: 3}
-      propertyPath: m_Constraints
-      value: 56
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 3615357565987646921, guid: 6d7d1af0c0a123349b37355c2c1a9b3a, type: 3}
       propertyPath: m_RootOrder
