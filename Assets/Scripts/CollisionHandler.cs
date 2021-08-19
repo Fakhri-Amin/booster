@@ -11,6 +11,8 @@ public class CollisionHandler : MonoBehaviour
 
     private AudioSource audioSource;
 
+    private bool isTranstioning = false;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -18,10 +20,11 @@ public class CollisionHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if (isTranstioning) { return; }
+
         switch (other.gameObject.tag)
         {
             case "Friendly":
-                Debug.Log("Friendly");
                 break;
             case "Finish":
                 StartSuccessSequence();
@@ -30,11 +33,12 @@ public class CollisionHandler : MonoBehaviour
                 StartCrashSequence();
                 break;
         }
-
     }
 
     void StartCrashSequence()
     {
+        isTranstioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(dieSFX);
         // TODO Add Partcile Effect
         GetComponent<PlayerMovement>().enabled = false;
@@ -43,6 +47,8 @@ public class CollisionHandler : MonoBehaviour
 
     void StartSuccessSequence()
     {
+        isTranstioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(successSFX);
         // TODO Add Partcile Effect
         GetComponent<PlayerMovement>().enabled = false;
