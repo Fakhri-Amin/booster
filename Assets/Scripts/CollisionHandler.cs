@@ -8,6 +8,9 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] float levelLoadDelay;
     [SerializeField] AudioClip dieSFX;
     [SerializeField] AudioClip successSFX;
+    [SerializeField] ParticleSystem dieParticle;
+    [SerializeField] ParticleSystem successParticle;
+    [SerializeField] GameObject theBody;
 
     private AudioSource audioSource;
 
@@ -40,8 +43,10 @@ public class CollisionHandler : MonoBehaviour
         isTranstioning = true;
         audioSource.Stop();
         audioSource.PlayOneShot(dieSFX);
-        // TODO Add Partcile Effect
+        // Instantiate(dieParticle, transform.position, Quaternion.identity);
+        dieParticle.Play();
         GetComponent<PlayerMovement>().enabled = false;
+        theBody.SetActive(false);
         Invoke("ReloadLevel", levelLoadDelay);
     }
 
@@ -50,8 +55,9 @@ public class CollisionHandler : MonoBehaviour
         isTranstioning = true;
         audioSource.Stop();
         audioSource.PlayOneShot(successSFX);
-        // TODO Add Partcile Effect
+        successParticle.Play();
         GetComponent<PlayerMovement>().enabled = false;
+        GetComponent<Rigidbody>().freezeRotation = true;
         Invoke("LoadNextLevel", levelLoadDelay);
     }
 
