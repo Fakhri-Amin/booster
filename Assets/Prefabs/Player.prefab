@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 1350691865932980259}
   - component: {fileID: 8532498812640651989}
   - component: {fileID: 2884360902780778719}
-  - component: {fileID: 212720554}
   - component: {fileID: 1717343882}
+  - component: {fileID: 212720554}
+  - component: {fileID: 1586574530647788965}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -114,20 +115,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 0
---- !u!114 &212720554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6630785367490689713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3586cda042c76054ba4a8a4b424c3fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thrustSpeed: 1200
-  rotateSpeed: 130
 --- !u!82 &1717343882
 AudioSource:
   m_ObjectHideFlags: 0
@@ -224,3 +211,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &212720554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6630785367490689713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3586cda042c76054ba4a8a4b424c3fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrustSpeed: 800
+  rotateSpeed: 100
+--- !u!114 &1586574530647788965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6630785367490689713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c59ab5bff9686c54fa4ea2d4b96f28b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
